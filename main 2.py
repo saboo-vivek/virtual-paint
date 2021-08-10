@@ -7,12 +7,12 @@ cap.set(3, frameWidth)
 cap.set(4, frameHeight)
 cap.set(10,150)
 
-myColors = [[5,107,0,19,255,255],
+myColors = [[5,107,0,19,255,255],  ###### h min,s min ,v min,hmax,s max,v max
             [133,56,0,159,156,255],
             
             [57,76,0,100,255,255],
             [90,48,0,118,255,255]]
-myColorValues = [[51,153,255],          ## BGR
+myColorValues = [[51,153,255],          ## BGR values
                  [255,0,255],
                  [0,255,0],
                  [255,0,0]]
@@ -32,7 +32,7 @@ def findColor(img,myColors,myColorValues):
         if x!=0 and y!=0:
             newPoints.append([x,y,count])
         count +=1
-        #cv2.imshow(str(color[0]),mask)
+        
     return newPoints
 
 def getContours(img):
